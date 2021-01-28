@@ -1,0 +1,46 @@
+.menu-item {
+    position: relative;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 8.5px 17px;
+    flex: 1 1 auto;
+    background: #ffffff;
+    box-shadow: 1px 2px 5px rgb(189, 188, 188);
+    overflow: hidden;
+    
+    &.large {
+      height: 400px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border: 2px solid rgb(255, 255, 255);
+      padding: 10px 15px;
+      transform: skewX(-5deg);
+      background:rgba(0, 0, 0, 0.589);
+      color: #ffffff;
+    }
+   
+  
+  
+}
+
+
+.menu-item-bg {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: transform 1s ease;
+  
+  &:hover {
+   
+    transform: scale(1.5);
+  }
+}
