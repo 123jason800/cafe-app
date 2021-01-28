@@ -1,9 +1,6 @@
 .menu-item {
     position: relative;
     min-width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 300px;
     margin: 8.5px 17px;
     flex: 1 1 auto;
@@ -25,9 +22,12 @@
       background:rgba(0, 0, 0, 0.589);
       color: #ffffff;
     }
+
+   &:hover {
+     cursor: pointer;
+   }
    
-  
-  
+
 }
 
 
@@ -38,7 +38,9 @@
   width: 100%;
   position: absolute;
   transition: transform 1s ease;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
    
     transform: scale(1.5);
