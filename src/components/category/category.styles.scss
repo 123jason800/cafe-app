@@ -1,0 +1,89 @@
+.category-section {
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin: 45px 0;
+
+    @media screen and (max-width: 950px) {
+        margin: 45px 20px;
+    }
+    
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+           
+            width: 25%;
+           
+            @media screen and (max-width: 1350px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 750px) {
+                width: 100%;
+            }
+            .item-card {
+                margin: 20px 30px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 25px;
+                border: 7px solid white;
+                &:hover {
+
+                    .item-overlay {
+                        opacity: 1;
+                    }
+                }
+            }
+         
+        }
+    }
+
+  
+    
+
+}
+
+
+
+.item-title {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.753);
+    margin: 0;
+    padding: 20px 10px;
+}
+
+.item-price {
+    color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.item-overlay {
+    background: rgba(0, 0, 0, 0.719);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: ease-in 0.5s;
+
+    .item-btn {
+        font-size: 24px;
+        padding: 10px 25px;
+        border-radius: 15px;
+        border: 0;
+        outline: none;
+        width: 38%;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }   
+  
+}

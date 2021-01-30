@@ -1,13 +1,16 @@
 .menu-item {
     position: relative;
-    min-width: 30%;
+    width: 30%;
     height: 300px;
     margin: 8.5px 17px;
     flex: 1 1 auto;
     background: #ffffff;
     box-shadow: 1px 2px 5px rgb(189, 188, 188);
     overflow: hidden;
-    
+    border: 5px solid white;
+    @media screen and (max-width: 750px) {
+      width: 45%;
+    }
     &.large {
       height: 400px;
     }
@@ -32,17 +35,17 @@
 
 
 .menu-item-bg {
+ 
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
-  position: absolute;
   transition: transform 1s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+
   &:hover {
-   
     transform: scale(1.5);
   }
 }

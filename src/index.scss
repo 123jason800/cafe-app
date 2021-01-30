@@ -4,4 +4,25 @@ html {
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, rgb(123, 151, 132), rgb(252, 247, 213));
+}
+
+.container {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 1350px) {
+        max-width: 780px;
+    }
+}
+
+
+.app {
+    height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
