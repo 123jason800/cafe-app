@@ -13,7 +13,7 @@ class Navbar extends Component {
     render() {
         const {showNavItems} = this.state;
 
-        console.log(showNavItems);
+      
         return (
             <header>
                 <div className="container">
@@ -25,9 +25,9 @@ class Navbar extends Component {
                         <div 
                         className={`nav-items ${showNavItems?'show-menu':''}`} >
                             <Link to="/" className="navbar-item icon-home-house-streamline"/>
-                            <Link to="/cart" className="navbar-item icon-caddie-shop-shopping-streamline"/>
-                            <Link to="/categories" className="navbar-item icon-align-justify"/>
+                            <Link to="/categories" className="navbar-item ">Shop</Link>
                             <Link to="/login" className="navbar-item"> Login </Link>
+                            <Link to="/cart" className="navbar-item icon-caddie-shop-shopping-streamline"/>
                         </div>
                     </nav>
                 </div>

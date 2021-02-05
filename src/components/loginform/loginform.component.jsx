@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import './loginform.styles.scss';
-
+import FormInput from './../forminput/forminput.component';
 class Loginpage extends Component {
     constructor(props) {
         super();
@@ -9,13 +9,41 @@ class Loginpage extends Component {
             password: ''
         }
     }
+
+    handleChange = e => {
+        const {value, name} = e.target;
+        this.setState({[name]: value});
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        
+        this.setState({email:'',password:''})
+    }
+
     render() {
         return ( 
       
-            <form className="login-form">
-                <h2>Sign in using Email and Password</h2>
-                <input type="email" placeholder="email" />
-                <input type="password" placeholder="*****" />
+            <form onSubmit={this.handleSubmit} className="login-form">
+                <h2>Sign in</h2>
+                <FormInput 
+                placeholder="Enter your Email"   
+                handleChange={this.handleChange}
+                onBlur={(e) => e.target.placeholder = "Enter your Email"}
+                value={this.state.email} 
+                name="email"
+                type="email" 
+                />
+                <FormInput 
+                placeholder="Enter your Password"   
+                onBlur={(e) => e.target.placeholder = "Enter your Password"}
+                handleChange={this.handleChange}
+                password={this.state.password} 
+                value={this.state.password} 
+                name="password"
+                type="password" 
+                />
+                <button className="login-btn" type="submit">Login</button>
             </form>
 
         )

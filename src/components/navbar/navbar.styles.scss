@@ -6,6 +6,7 @@ header {
     border-radius: 10px;
     @media screen and (max-width: 950px) {
         margin: 0;
+        border-radius: unset;
     }
 }
 
@@ -60,10 +61,11 @@ header {
 
 
     .navbar-item {
+        width: 50px;
         padding: 0px 35px;
         background: linear-gradient(to right, #ffffff 0%, #ddecc4 50%, rgb(234, 255, 214) 100%);
         background-size: 2000%;
-
+        text-align: center;
         &:hover {
             animation-name: gradient;
             -webkit-animation-name: gradient;
